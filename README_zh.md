@@ -50,6 +50,16 @@ brew install ntfs-3g-mac
 chmod +x ~/Desktop/ntfs-smart.sh
 ```
 
+#### 可选：创建全局软链接
+
+为了在任意终端直接运行脚本，可以添加软链接：
+
+```bash
+sudo ln -s ~/Projects/personal/macos-ntfs-smart-mount/src/zh/ntfs-smart.sh /usr/local/bin/ntfs-smart
+```
+
+若想使用英文提示信息，只需把路径改为 `src/en/ntfs-smart.sh`。之后即可直接运行 `ntfs-smart`（涉及写入时依旧会提示输入 sudo 密码）。
+
 ### 脚本主要功能
 
 * 自动检测系统只读挂载 (fskit)，并卸载后重新挂载为可写。

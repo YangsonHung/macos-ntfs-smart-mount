@@ -50,6 +50,16 @@ Save the script as `~/Desktop/ntfs-smart.sh` and make it executable:
 chmod +x ~/Desktop/ntfs-smart.sh
 ```
 
+#### Optional: add a global shortcut
+
+Create a symlink so you can run the script from any terminal:
+
+```bash
+sudo ln -s ~/Projects/personal/macos-ntfs-smart-mount/src/en/ntfs-smart.sh /usr/local/bin/ntfs-smart
+```
+
+Prefer the Chinese logs? Point the symlink to `src/zh/ntfs-smart.sh` instead. After this, just run `ntfs-smart` anywhere (it will still prompt for sudo when needed).
+
 ### Script Features
 
 * Automatically detect macOS read-only mounts (fskit) and remount as writable.
